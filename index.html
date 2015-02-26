@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>smoothed line | amCharts</title>
+		<meta name="description" content="chart created using amCharts live editor" />
+
+		<!-- amCharts javascript sources -->
+		<script type="text/javascript" src="http://cdn.amcharts.com/lib/3/amcharts.js"></script>
+		<script type="text/javascript" src="http://cdn.amcharts.com/lib/3/serial.js"></script>
+
+		<!-- amCharts javascript code -->
+		<script type="text/javascript">
+			AmCharts.makeChart("chartdiv",
+				{
+					"type": "serial",
+					"pathToImages": "http://cdn.amcharts.com/lib/3/images/",
+					"categoryField": "category",
+					"autoMarginOffset": 40,
+					"marginRight": 60,
+					"marginTop": 60,
+					"colors": [
+						"#EAAAAD"
+					],
+					"startDuration": 1,
+					"fontSize": 13,
+					"theme": "default",
+					"categoryAxis": {
+						"gridPosition": "start"
+					},
+					"trendLines": [],
+					"graphs": [
+						{
+							"balloonText": "[[title]] of [[category]]:[[value]]",
+							"bullet": "round",
+							"bulletSize": 10,
+							"id": "AmGraph-1",
+							"lineThickness": 3,
+							"title": "graph 1",
+							"type": "smoothedLine",
+							"valueField": "column-1"
+						}
+					],
+					"guides": [],
+					"valueAxes": [
+						{
+							"id": "ValueAxis-1",
+							"title": ""
+						}
+					],
+					"allLabels": [],
+					"balloon": {},
+					"titles": [],
+					"dataProvider": [
+						{
+							"category": "02/23",
+							"column-1": "173.6"
+						},
+						{
+							"category": "02/24",
+							"column-1": "172"
+						},
+						{
+							"category": "02/25",
+							"column-1": "172.6"
+						},
+						{
+							"category": "02/26",
+							"column-1": "172.4"
+						}
+					]
+				}
+			);
+		</script>
+	</head>
+	<body>
+		<div id="chartdiv" style="width: 100%; height: 400px; background-color: #FFFFFF;" ></div>
+	</body>
+</html>
